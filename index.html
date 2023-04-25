@@ -65,6 +65,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             });
         });
 	    </script>
+	window.dataLayer = window.dataLayer || [];
+dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: "purchase",
+  ecommerce: {
+    items: [
+     {
+      item_id: "ITM_12345",
+      item_name: "Python",
+      affiliation: "online_course",
+      currency:"INR",
+      
+    },
+    {
+      item_id: "ITM_123456",
+      item_name: "web analytics",
+      affiliation: "online course",
+      currency:"INR"
+    }]
+  }
+});
+	    </script>
 	
     <title>course page</title>
 </head>
